@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_25sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:button="@drawable/xml_checkbox_selector" />
+
+            <Space
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvIngredanceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ginger"
+                android:fontFamily="@font/appfont"
+                android:textSize="@dimen/_15sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="SAR"
+                android:fontFamily="@font/appfont"
+                android:textSize="@dimen/_15sdp" />
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/tvIngredanceSAR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="20.00"
+                android:fontFamily="@font/appfont"
+                android:textSize="@dimen/_15sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

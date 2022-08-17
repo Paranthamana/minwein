@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nex3z.flowlayout.FlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    app:flFlow="true"
+    app:flChildSpacing="auto"
+    app:flChildSpacingForLastRow="align"
+    app:flRowSpacing="8dp">
+
+<CheckBox
+    android:id="@+id/cbCuisines"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorPrimary"
+    android:button="@drawable/xml_checkbox_selector"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:paddingStart="@dimen/_5sdp"
+    android:paddingEnd="@dimen/_5sdp"/>
+
+</com.nex3z.flowlayout.FlowLayout>

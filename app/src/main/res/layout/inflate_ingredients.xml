@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/tvIngredientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chilli Chicken"
+        android:gravity="center|start"
+        android:fontFamily="@font/appfont"
+        android:textSize="@dimen/_13sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tvIngredientPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAR 60.00"
+        android:fontFamily="@font/appfont"
+        android:textSize="@dimen/_13sdp"
+        android:gravity="center|end"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

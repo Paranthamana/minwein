@@ -1,0 +1,37 @@
+package com.minwein.customer.model;
+
+import com.minwein.customer.enums.NavigationMenuEnum;
+
+/**
+ * Created by AMSHEER on 06-12-2017.
+ */
+
+public class NavigationMenuModel {
+    private int navigationIcon;
+    private String navigationItemName;
+    private NavigationMenuEnum navigationItemId;
+
+    public int getNavigationIcon() {
+        return navigationIcon;
+    }
+
+    public void setNavigationIcon(int navigationIcon) {
+        this.navigationIcon = navigationIcon;
+    }
+
+    public String getNavigationItemName() {
+        return navigationItemName;
+    }
+
+    public void setNavigationItemName(String navigationItemName) {
+        this.navigationItemName = navigationItemName;
+    }
+
+    public NavigationMenuEnum getNavigationItemId() {
+        return navigationItemId;
+    }
+
+    public void setNavigationItemId(NavigationMenuEnum navigationItemId) {
+        this.navigationItemId = navigationItemId;
+    }
+}

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_minus6sdp">
+
+    <LinearLayout
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_3sdp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivTimeLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/xml_shape_rounded_circlegreen"/>
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_155sdp"
+                android:background="@color/gray"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_1sdp"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_minus20sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvTimeLineName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rajesh Prabhu"
+                android:fontFamily="@font/appfontmedium"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tvTasteTitle"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:fontFamily="@font/appfont"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_13sdp"/>
+                <Space
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_5sdp" />
+                <RatingBar
+                    android:id="@+id/rtbTimeLineRatingTaste"
+                    style="@style/foodRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:isIndicator="true"
+                    android:stepSize="0.5"
+                    android:rating="4"
+                    android:paddingTop="@dimen/_4sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tvTimingTitle"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_13sdp"/>
+                <Space
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_5sdp" />
+                <RatingBar
+                    android:id="@+id/rtbTimeLineRatingTiming"
+                    style="@style/foodRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:isIndicator="true"
+                    android:stepSize="0.5"
+                    android:rating="4"
+                    android:paddingTop="@dimen/_4sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tvPriceTitle"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:fontFamily="@font/appfont"
+                    android:padding="@dimen/_1sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp" />
+                <TextView
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_13sdp"/>
+                <Space
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="@dimen/_5sdp" />
+                <RatingBar
+                    android:id="@+id/rtbTimeLineRatingPrice"
+                    style="@style/foodRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:focusable="false"
+                    android:isIndicator="true"
+                    android:stepSize="0.5"
+                    android:rating="4"
+                    android:paddingTop="@dimen/_4sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum is simply dummy of the printing and typrsetting industry.Ipsum has been the industry's 1500's"
+                    android:maxLines="2"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                 android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/no_image"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:src="@drawable/no_image"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:src="@drawable/no_image"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/gray"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

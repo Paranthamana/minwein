@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/cbFilter"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:button="@drawable/xml_filter_checkbox"
+        android:visibility="visible" />
+
+
+        <RadioButton
+            android:id="@+id/rbFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:button="@drawable/radio_selector"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvFilterItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/appfont"
+        android:text="12246654"
+        android:textColor="@color/lightblack"
+        android:textSize="@dimen/_12sdp" />
+</LinearLayout>
+    <Button
+        android:id="@+id/btnMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16sdp"
+        android:text="more"/>
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/_7sdp">
+
+    <ImageView
+        android:id="@+id/ivNavigationIcon"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/navigation_icon" />
+
+    <TextView
+        android:id="@+id/tvNavigationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/ivNavigationIcon"
+        android:padding="@dimen/_5sdp"
+        android:fontFamily="@font/appfont"
+        android:text="jkvjkxvcvkxhvckjhv"
+        android:textSize="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tvLoyaltyPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tvNavigationName"
+        android:padding="@dimen/_5sdp"
+        android:text=""
+        android:fontFamily="@font/appfont"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp" />
+</RelativeLayout>

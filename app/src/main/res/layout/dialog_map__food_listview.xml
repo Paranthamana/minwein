@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llRestaurantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tvRestaurantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/appfont"
+        android:gravity="center"
+        android:text="Chicken Lolipop"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_close"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvFoodCuisines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/appfont"
+        android:maxLines="2"
+        android:text="Places"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        android:layout_below="@+id/llRestaurantName"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFoodCuisines"
+        android:layout_above="@+id/tvFoodAllMenu"/>
+
+    <TextView
+        android:id="@+id/tvFoodAllMenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/lightgreen"
+        android:fontFamily="@font/appfontmedium"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+

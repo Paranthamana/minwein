@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "914855184561",
+    "project_id": "minwein-191005"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914855184561:android:35d8f080bd93b0e7",
+        "android_client_info": {
+          "package_name": "com.minwein.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914855184561-f8i3c91fktf2mo11bveh9rpu2k223gm0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.minwein.customer",
+            "certificate_hash": "dd8391dbaa59cf8687f579efb8ecd64a881326db"
+          }
+        },
+        {
+          "client_id": "914855184561-10agf2mo6bv95iilt0so048t1d6j7ukm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE-Suk_jf_izh-SjzBPjrCeWPFqVyrRdo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

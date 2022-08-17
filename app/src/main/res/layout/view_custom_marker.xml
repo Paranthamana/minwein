@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_marker_view"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_130sdp"
+    android:background="@drawable/xml_bg_discalimer"
+    android:padding="@dimen/_8sdp">
+
+    <ImageView
+        android:id="@+id/ivVendorImage"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/xml_bg_discalimer"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivVendorImage2"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_toEndOf="@+id/ivVendorImage"
+        android:background="@drawable/xml_bg_discalimer"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvMultipleItems"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_toEndOf="@+id/ivVendorImage2"
+        android:background="@drawable/ic_dummy"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_55sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivRating"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:numStars="5"
+            android:src="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/tvRatingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(0.0)"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</RelativeLayout>

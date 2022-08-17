@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbFilter"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivback"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tvHeader"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"/>
+
+            <TextView
+                android:id="@+id/tvClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:text=""
+                android:fontFamily="@font/appfontbold"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@color/colorPrimary"/>
+
+            <ImageView
+                android:id="@+id/ivFilterSave"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_address_save"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tvSortDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text="Sort by"
+                        android:fontFamily="@font/appfontbold"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:background="@color/white"/>
+
+                    <com.nex3z.flowlayout.FlowLayout
+                        android:id="@+id/flow2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:flChildSpacing="auto"
+                        app:flChildSpacingForLastRow="align"
+                        app:flRowSpacing="@dimen/_8sdp"
+                        android:background="@color/white"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/tv_popularity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tvA_Z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_Fast_Delivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_Recommended"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_Rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_New"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_Delivery_fee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_open"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_Food_Truck"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <TextView
+                            android:id="@+id/tv_Restaurant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:background="@drawable/lable_bg"
+                            android:fontFamily="@font/appfont"
+                            android:gravity="center|start"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </com.nex3z.flowlayout.FlowLayout>
+
+                    <TextView
+                        android:id="@+id/tvFilterDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text="Filter by"
+                        android:fontFamily="@font/appfontbold"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:background="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/tvCuisinesTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Cuisines"
+                        android:textColor="@color/black"
+                        android:background="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/appfontmedium"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvCuisines"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_200sdp"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/tvMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|end"
+                        android:text="+ More"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/appfont"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvFoodType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Food Type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/appfontmedium"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/white">
+
+                        <com.nex3z.flowlayout.FlowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:flChildSpacing="auto"
+                            app:flChildSpacingForLastRow="align"
+                            app:flRowSpacing="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/white">
+
+                            <CheckBox
+                                android:id="@+id/cbVeg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:button="@drawable/xml_checkbox_selector"
+                                android:textColor="@color/colorPrimary"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/_10sdp"/>
+
+                            <CheckBox
+                                android:id="@+id/cbNonVeg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:button="@drawable/xml_checkbox_selector"
+                                android:textColor="@color/colorPrimary"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/_10sdp"/>
+
+                            <CheckBox
+                                android:id="@+id/cbBoth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:button="@drawable/xml_checkbox_selector"
+                                android:textColor="@color/colorPrimary"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"/>
+
+                        </com.nex3z.flowlayout.FlowLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvNearest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Nearest"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/appfontmedium"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                        <com.nex3z.flowlayout.FlowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:flChildSpacing="auto"
+                            app:flChildSpacingForLastRow="align"
+                            app:flRowSpacing="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/white">
+
+                        <RadioGroup
+                            android:id="@+id/rgNearest"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white">
+
+                            <RadioButton
+                                android:id="@+id/rbMinZero"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbMinOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbMinTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbMinThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </RadioGroup>
+
+                        </com.nex3z.flowlayout.FlowLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+                    <TextView
+                        android:id="@+id/tvDeliveryType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Delivery Type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/appfontmedium"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                        <com.nex3z.flowlayout.FlowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:flChildSpacing="auto"
+                            app:flChildSpacingForLastRow="align"
+                            app:flRowSpacing="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/white">
+
+                        <RadioGroup
+                            android:id="@+id/rgDeliveryType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+
+                            <RadioButton
+                                android:id="@+id/rbCompany"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbVendor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </RadioGroup>
+
+                        </com.nex3z.flowlayout.FlowLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvMinOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="Min.Order Value"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/white"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/gray"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+
+                        <com.nex3z.flowlayout.FlowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:flChildSpacing="auto"
+                            app:flChildSpacingForLastRow="align"
+                            app:flRowSpacing="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/white">
+
+                        <RadioGroup
+                            android:id="@+id/rgMinOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:background="@color/white">
+
+                            <RadioButton
+                                android:id="@+id/rbAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbUnderOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbUnderTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                            <RadioButton
+                                android:id="@+id/rbUnderThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:button="@drawable/radio_selector"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:textColor="@color/colorPrimary"/>
+
+                        </RadioGroup>
+
+                        </com.nex3z.flowlayout.FlowLayout>
+
+
+                        <Button
+                            android:id="@+id/btnApply"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/xml_rounded_button_add"
+                            android:text="Apply"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/appfontmedium"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

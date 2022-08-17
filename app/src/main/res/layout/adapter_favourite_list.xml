@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/xml_rounded_rectangle">
+
+            <LinearLayout
+                android:id="@+id/llFavourite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdvFavouriteRestaurant"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    fresco:actualImageScaleType="fitCenter"
+                    android:background="@drawable/xml_rounded_rectangle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_1sdp">
+
+                    <TextView
+                        android:id="@+id/tvFavoriteRestaurantName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/appfont"
+                        android:text="Restaurant Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <TextView
+                        android:id="@+id/tvFavoriteRestaurantPlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/appfont"
+                        android:maxLines="2"
+                        android:text="Places"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp" />
+
+                    <ToggleButton
+                        android:id="@+id/tbFavoriteSelector"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/xml_favourite_selector"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:textOn=""
+                        android:textOff=""/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

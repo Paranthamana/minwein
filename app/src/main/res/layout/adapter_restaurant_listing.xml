@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/llRestaurant">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        fresco:cardCornerRadius="@dimen/_5sdp"
+        android:background="@drawable/xml_rounded_rectangle">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/llStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/xml_imagebg_rounded_rectangle"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ivRestaurant"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:roundAsCircle="true"/>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/xml_rating_rounded"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_star"
+                        android:layout_marginStart="@dimen/_3sdp"/>
+
+                    <TextView
+                        android:id="@+id/tvRatingValues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/appfontbold"
+                        android:text="0.00"
+                        android:layout_marginStart="@dimen/_2sdp"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVendorStatus"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:background="@drawable/xml_shape_rounded_circlegreen">
+                <ImageView
+                    android:id="@+id/ivVendorStatus"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_closed"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <Space
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRestaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant Name"
+                    android:fontFamily="@font/appfontmedium"
+                    android:textSize="@dimen/_15sdp" />
+
+                <Space
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="3dp" />
+
+                <TextView
+                    android:id="@+id/tvCuisine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Places"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Space
+                    android:layout_width="@dimen/_5sdp"
+                    android:layout_height="3dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                    <RatingBar
+                        android:id="@+id/rtbRestaurantRating"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:numStars="5"
+                        android:stepSize="0.5"
+                        android:clickable="false"
+                        android:focusableInTouchMode="false"
+                        android:focusable="false"
+                        android:isIndicator="true"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tvRestaurantRate"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="match_parent"
+                        android:gravity="center|start"
+                        android:text="(5.0)"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/appfont"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ivVeg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/ic_veg"
+                        android:visibility="gone"/>
+
+                    <Space
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/ivNonVeg"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_1sdp"
+                        android:src="@drawable/ic_non_veg"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ivPaymentOp1"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_visa"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"/>
+
+                    <ImageView
+                        android:id="@+id/ivPaymentOp2"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_currency"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/rbFavoriteSelector"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/xml_favourite_selector"
+                        android:gravity="center"
+                        android:textOn=""
+                        android:textOff=""/>
+
+                    <TextView
+                        android:id="@+id/tvfavoritesCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|end"
+                        android:gravity="center|start"
+                        android:text="(100)"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:fontFamily="@font/appfont"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@color/lightgray" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight=".9">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/ic_delivery_fee" />
+
+                <TextView
+                    android:id="@+id/tvDeliveryFee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/appfont"
+                    android:text="Delivery"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=":"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp" />
+                <TextView
+                    android:id="@+id/tvDelFeeSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=""
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvDeliveryFeeSAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="SAR200.00"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:background="@color/gray"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/ic_minimum_order" />
+
+                <TextView
+                    android:id="@+id/tvMinimumOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/appfont"
+                    android:text="Min"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=":"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvMinimumOrderSAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="SAR100.00"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/ic_delivery_time" />
+
+                <TextView
+                    android:id="@+id/tvAverageDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/appfont"
+                    android:text="AVG"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=":"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvDeliveryAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1000Min"
+                    android:fontFamily="@font/appfont"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
